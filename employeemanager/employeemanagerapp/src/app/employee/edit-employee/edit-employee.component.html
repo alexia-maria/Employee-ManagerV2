@@ -1,0 +1,48 @@
+<div class="backdrop" ></div>
+<dialog open>
+  @if(mode==="edit"){
+    <h2>Edit Employee</h2>
+  }
+  @if(mode==="save") {
+    <h2>Add Employee </h2>
+  }
+
+  <form>
+    <p>
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" [(ngModel)]="employee.name" required />
+    </p>
+
+    <p>
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" [(ngModel)]="employee.email" required />
+    </p>
+
+    <p>
+      <label for="jobTitle">Job Title</label>
+      <input type="text" id="jobTitle" name="jobTitle" [(ngModel)]="employee.jobTitle" required />
+    </p>
+
+    <p>
+      <label for="phone">Phone</label>
+      <input type="tel" id="phone" name="phone" [(ngModel)]="employee.phone" required />
+    </p>
+
+    <p>
+      <label for="imageUrl">Image URL</label>
+      <input type="url" id="imageUrl" name="imageUrl" [(ngModel)]="employee.imageUrl" required />
+    </p>
+
+    <p class="actions">
+      <button type="button" (click)="onCancelCloseForm()">Cancel</button>
+
+      @if(mode==="edit"){
+        <button type="submit" (click)="onEditModifyData()">Edit</button>
+      }
+      @if(mode==="save"){
+      <button type="submit" (click)="onSave()">Save</button>
+      }
+    </p>
+  </form>
+</dialog>
+

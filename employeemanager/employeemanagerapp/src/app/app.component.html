@@ -1,0 +1,22 @@
+<app-header />
+
+<app-search-bar (search)="onSearchParent($event)" />
+<main>
+  <ul id="employees">
+    @for(employee of employees; track employee.id){
+      <li>
+        <app-employee  [employee] = "employee" [selected]="employee.id === selectedEmployeeId" (edit)="onEditEmployeeParent($event)" (delete)="onDeleteEmployeeParent($event)"/>
+      </li>
+      }
+  </ul>
+</main>
+
+@if(selectedEmployee){
+  <app-edit-employee [mode]="edit" [employee]="selectedEmployee" (close)="onCancelCloseFormParent()"/>
+}
+
+<app-add-employee (save)="onAddEmployeeParent()"/>
+
+@if(isAdding){
+  <app-edit-employee [mode]="save"  (save)="onSaveModifyList($event)"/>
+}

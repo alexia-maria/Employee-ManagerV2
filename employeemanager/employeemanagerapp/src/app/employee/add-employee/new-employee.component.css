@@ -1,0 +1,31 @@
+.btn-add {
+  display: block;
+  width: 100%;
+  max-width: 200px;
+  margin: 2rem auto;
+  padding: 0.75rem 1.5rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+  background: linear-gradient(
+    to bottom,
+    #004e8f, /* Albastru închis */
+    #007bb8  /* Bleu deschis */
+  );
+  border: none;
+  border-radius: 6px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-add:hover {
+  background-color: #0056b3;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.btn-add:active {
+  background-color: #003f7f;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+}

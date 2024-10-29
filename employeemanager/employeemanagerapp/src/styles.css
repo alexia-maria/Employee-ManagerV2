@@ -1,0 +1,16 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: background-color: rgba(173, 216, 230, 0.5);
+  color: #0d47a1;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
