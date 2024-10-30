@@ -18,8 +18,6 @@ public class Employee implements Serializable {
     private String phone;
     private String imageUrl;
 
-    // putem stoca o imagine si cu File, dar e mai ok sa salvam doar url-ul imaginii
-    // campul stocheaza de fapt locatia imaginii
 
     @Column(nullable = false, updatable = false)
     private String employeeCode;
