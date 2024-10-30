@@ -13,11 +13,11 @@ public class CorsConfig {
         return new WebMvcConfigurer() {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
-                registry.addMapping("/**")  // Permite pentru toate rutele
-                        .allowedOrigins("http://localhost:4200")  // Permite doar de la frontend-ul Angular
-                        .allowedMethods("GET", "POST", "PUT", "DELETE")  // Permite metodele HTTP specificate
-                        .allowedHeaders("*")  // Permite toate header-ele
-                        .allowCredentials(true);  // Permite trimiterea de credențiale
+                registry.addMapping("/**")  
+                        .allowedOrigins("http://localhost:4200")  
+                        .allowedMethods("GET", "POST", "PUT", "DELETE")  
+                        .allowedHeaders("*")  
+                        .allowCredentials(true);  
             }
         };
     }
